@@ -1,7 +1,7 @@
 package neodb_go_client
 
 const NeoDBUrl = "https://neodb.social"
-const TestAccessToken = ""
+const TestAccessToken = "MYf5AmaVmH35rfOtAvo92JCTSK7eS"
 
 type ShelfType string
 
