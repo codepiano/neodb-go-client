@@ -19,7 +19,7 @@ type Item struct {
 	Title             string              `json:"title"`
 	Brief             string              `json:"brief"`
 	CoverImageUrl     string              `json:"cover_image_url"`
-	Rating            float32             `json:"rating"`
+	Rating            float64             `json:"rating"`
 	RatingCount       int                 `json:"rating_count"`
 }
 
