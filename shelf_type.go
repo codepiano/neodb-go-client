@@ -35,5 +35,12 @@ func (n *NeoClient) GetMyShelfByTypeAndCategory(req *ShelfTypeRequest) (*PagedMa
 	if err != nil {
 		return nil, errors.Join(InternalErr, err)
 	}
+	for _, datum := range result.Data {
+		t, err := parseDate(datum.CreatedTimeStr)
+		if err != nil {
+			return nil, errors.Join(InternalErr, err)
+		}
+		datum.CreatedTime = t
+	}
 	return result, nil
 }
